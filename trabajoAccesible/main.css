@@ -1,0 +1,253 @@
+
+@media only screen and (max-width: 650px) {
+
+    .price{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+nav{
+    overflow:hidden;
+    background-color: #1C83C5;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    justify-content:center;
+    padding-top: 15px;
+}
+
+
+.navbar{
+    position:static;
+    top: 0px;
+ 
+}
+
+nav>ul{ /*solo afecta al ul directamente hijo del nav*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+   
+}
+
+nav>ul li{
+    float: left;
+    color: #ffffff;
+    text-align: center;
+  
+}
+
+.right{
+    float: right;
+}
+
+nav>ul li a{
+    display: block;
+    background: #1C83C5;
+    color: #ffffff;
+    padding: 6px 40px 15px 40px;
+    transition: background-color 0.2s ease;
+    
+    text-decoration: none;
+}
+
+nav>ul li a:hover{
+    color:rgb(0, 0, 0);
+    background-color: #76b5f4;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+/*main*/
+
+#logo{
+    height: 20%;
+    width: 20%;
+    justify-content:center;
+    display: block;
+    margin: auto;
+    /*margin-bottom: -30px;*/
+    animation: anim1 2s ease-in-out alternate infinite;
+     -webkit-animation: anim1 2s ease-in-out alternate infinite;
+}
+@keyframes anim1 {  
+    from { transform: scaleX(1) rotate(-15deg) ;-o-transform: scaleX(1) rotate(-15deg) ; }
+    to { transform: scaleX(-1) rotate(15deg);  -o-transform: scaleX(-1) rotate(15deg);}
+ }
+ @-webkit-keyframes anim1 {  
+    from { -webkit-transform: scaleX(1) rotate(-15deg) ; }
+    to { -webkit-transform: scaleX(-1) rotate(15deg);  }
+ }
+
+.audio{
+    text-align: center;
+    justify-content:center;
+    display: block;
+}
+button img{
+    width: 30px;
+    height: 30px
+
+}
+#botonnav{
+    margin-left: 10%;
+}
+
+body{
+   background-image: url(fondo-contacto.jpg);
+            background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url(fondo-contacto.jpg);
+            background-repeat:no-repeat;
+            background-attachment: fixed; 
+            background-size:cover;
+}
+
+
+section{
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.productos{
+    width: 100%;
+    height: 50%;
+    float: left;
+    margin: 40px 0px 0px 0px;
+}
+
+.titprod{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #920044;
+    text-shadow: 2px 2px #ffecec;
+}
+
+#dialogo{
+    text-align: center;
+}
+
+.containertext {
+    position: relative;
+    width: 30%;
+    float: left;
+    left: 5%;
+    
+}
+
+.imageprod {
+    
+    display: block;
+    width: 80%;
+    height: 250px;
+    
+    
+    margin: 25px 1% 0px 2%;
+    border:10px solid rgb(252, 197, 43);
+    border-radius: 50%;
+}
+
+.imageprod2 {
+   
+    display: block;
+    width: 80%;
+    height: 250px;
+    
+   
+    margin: 25px 1% 0px 2%;
+    border:10px solid rgb(252, 197, 43);
+    border-radius: 50%;
+}
+
+.inside {
+    transition: .5s ease; /* para que la caja de dentro salga minimamente con delay en la transicion*/
+    opacity: 0;/*de primeras no se ve*/
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-70%, -50%); /* centrar en 2d*/
+    -ms-transform: translate(-70%, -50%);
+    text-align: center;
+}
+
+.containertext:hover .imageprod {
+    opacity: 0.7; /* cuando sale la cajetilla de dentro la imagen principal se difumina*/
+/*transform: scaleX(-1);  hacia el lado opuesto*/
+}
+
+.containertext:hover .imageprod2 {
+    opacity: 0.7;
+    /*transform: scaleX(-1);*/
+}
+
+.containertext:hover .inside {
+    opacity: 1;
+}
+.textprod:hover{
+    cursor: pointer;
+    background-color: #FF9300;
+}
+
+
+.textprod {
+    background-color: #1C83C5;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.price{ /* precio*/
+    background-color: #FFFB00;
+    font-size: 25px;
+    padding: 16px 32px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.prodocas{
+    width: 100%;
+    height: 50%;
+    float: left;
+    margin: 40px 0px 0px 0px;
+}
+
+.titNuevos{
+    padding-top: 30px;
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    color: #920044;
+    clear: both;
+    text-shadow: 2px 2px #b9dbf2; /*efecto de sombra al texto*/
+}
+#videos{
+    text-align: center;
+    justify-content:center;
+    display: block;
+}
+
+
+#pie{
+    background-color: transparent;
+    text-align: center;
+    font-size:x-large;
+    color:black;
+    transition: color 3s steps(4), font-size 4s steps(4);
+}
+#pie:hover {
+    font-size:xx-large;
+    color:#920044;
+}
+
+
+.b1{
+    border-color:#920044;
+    border-width: 3px;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Tienda Cesur</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="otros/logofinal.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="registro.html">REGISTRO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+
+        </nav>
+    </div>
+    <br>
+
+
+    <img id="logo" src="otros/logofinal.png" alt="logo">
+
+    <div class="audio">
+        <h3>MUSICA DE FONDO</h3>
+        <audio id="reproductor" controls>
+            <source src="otros/cancion.mp3" type="audio/mpeg">
+            <source src="otros/cancion.mp3" type="audio/ogg">
+            <source src="otros/cancion.mp3" type="audio/wav">
+            <br>
+            El navegador no soporta el audio
+    </div>
+
+    <section>
+        <div class="productos">
+            <div class="cursos">
+                <div class="titprod"> LOS MEJORES CURSOS DE CESUR </div>
+                <p style="text-align: center;font-weight: bold; ">De izquierda a derecha encontramos en primer lugar el
+                    de DAW, en segunda posición el de DAM y en tercera, el de ASIR</p>
+                <div class="containertext">
+                    <img class="imageprod" src="otros/dawmenospeso.jpg" alt="daw">
+                    <div class="inside">
+                        <div class="price">DAW</div>
+                        <div class="textprod">Solicitar</div>
+                    </div>
+                    <p style="margin-left: 115px;">DAW</p>
+                </div>
+                <div class="containertext">
+                    <img class="imageprod" src="otros/dammenospeso.jpg" alt="dam">
+                    <div class="inside">
+                        <div class="price">DAM</div>
+                        <div class="textprod">Solicitar</div>
+                    </div>
+                    <p style="margin-left: 115px;">DAM</p>
+                </div>
+                <div class="containertext">
+                    <img class="imageprod" src="otros/asirmenospeso.jpg" alt="asir">
+                    <div class="inside">
+                        <div class="price">ASIR</div>
+                        <div class="textprod">Solicitar</div>
+                    </div>
+                    <p style="margin-left: 115px;">ASIR</p>
+                </div>
+            </div>
+
+            <div class="productosNuevos">
+                <div class="nuevos">
+                    <div class="titNuevos">¡NUEVOS CURSOS!</div>
+                    <div class="containertext">
+                        <img class="imageprod2" src="otros/djmenospeso.jpg" alt="dj">
+                        <div class="inside">
+                            <div class="price">DJ</div>
+                            <div class="textprod">Solicitar</div>
+                        </div>
+                    </div>
+                    <div class="containertext">
+                        <img class="imageprod2" src="otros/fotografiamenospeso.jpg" alt="foto">
+                        <div class="inside"> 
+                            <div class="price">FOTO</div>
+                            <div class="textprod">Solicitar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="containertext">
+                    <img class="imageprod2" src="otros/cocinamenospeso.jpg" alt="cocina">
+                    <div class="inside">
+                        <div class="price">CHEF</div>
+                        <div class="textprod">Solicitar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="videos">
+            <div class="titNuevos">¡VIDEOS SOBRE CESUR</div>
+
+            <strong>Pulsa en el botón para la descripción escrita y hablada de cada video </strong> <br><br>
+            <button class="b1" onclick="descripcion()"> 1º video</button>
+            <button class="b1" onclick="descripcion()">2º video</button>
+            <div style="width: 400px; margin: auto; background-color: white;">
+                <p id="pdescrip"></p>
+            </div>
+
+            <script>
+                function descripcion() {
+                    var texto = ("Escoge tu modalidad Dual.<br> ¿Que es la formacion Dual?: Es aquella en la que se combina la formación en los centros educativos y en las empresas. <br>¿Qué requisitos tiene? Algunos de los requisitos serían tener entre 16-30 años y no poseer ninguna cualificacion profesional que te permita acceder a un contrato de prácticas. <br>¿Cobraré en la empresa? Depende de la Comunidad Autónoma donde estudies, aunque hay empresas como Cesur que garantizan esta retribución. <br>¿Me asignan una empresa o la busco yo? Te puedes buscar uan empresa que te guste y puedas hacer tus prácticas pero el centro educativo te dará otra en caso de que no encuentres ninguna. ")
+                    document.getElementById("pdescrip").innerHTML = texto
+                    speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+                }
+            </script>
+
+
+
+
+
+
+            <video id="video1" width="400" height="350" controls preload="metadata">
+                <source src="otros/videocorto.mp4" type="video/mp4">
+                <track kind="subtitles" src="otros/videocorto.vtt" lang="es" label="Español">
+                <track kind="subtitles" src="otros/videocorto.vtt" lang="en" label="Inglés">
+                <source src="otros/videocorto.ogg" type="v
+                ideo/ogg">
+                <source src="otros/videocorto.webm" type="video/webm">
+
+                El navegador no soporta el video
+
+            </video>
+            <video id="video2" width="400" height="350" controls preload="metadata">
+                <source src="otros/videolargo.mp4" type="video/mp4">
+                <track kind="subtitles" src="otros/videolargo.vtt" lang="es" label="Español">
+                <track kind="subtitles" src="otros/videolargo.vtt" lang="en" label="Inglés">
+
+                <source src="otros/videolargo.ogg" type="video/ogg">
+                <source src="otros/videolargo.webm" type="video/webm">
+
+                El navegador no soporta el video
+            </video>
+        </div>
+
+    </section>
+
+    <div id="dialogo">
+        <button onclick="document.getElementById('dial').show();">Más informacion...</button>
+    </div>
+
+
+    <dialog id="dial" style="width: 80%; text-align: center;">
+        <p>Aqui hay informacion sobre cesur....</p>
+        <img src="fondo-contacto.jpg" height="300px" alt="fachada del edificio" title="fachada del edificio">
+        <br>
+        <button onclick="document.getElementById('dial').close();">Cerrar el cuadro dialogo</button>
+    </dialog>
+    <br><br>
+
+    <div style="text-align: center; font-size: large;"><a href='https://www.cesurformacion.com/'
+            style="font-weight: bold;" target="_blank">¿NECESITA AYUDA? </a></div>
+
+            <br>
+    <div style="text-align: center">   
+    <a href="http://www.w3.org/WAI/WCAG1A-Conformance" title="Explicación del Nivel A de Conformidad">
+        <img style="text-align: center;" height="45" width="120" src="http://www.w3.org/WAI/wcag1A" alt="Icono de conformidad con el Nivel A, 
+	de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI"></a>
+    </div>    
+    <footer>
+        <p id="pie">Política de Privacidad en Cesur Formacion </p>
+    </footer>
+
+</body>
+
+</html>

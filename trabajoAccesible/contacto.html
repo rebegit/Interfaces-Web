@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+
+    <link rel="stylesheet" href="contacto.css">
+    <script src="contacto.js"></script>
+</head>
+
+<body>
+
+    <img class="logo" src="logo_cesur.png">
+    <div >
+        <h1 class="titulo">Contacta con nosotros</h1>
+        <p>Rellene todas las casillas para el formulario. </p>
+        <p>    El email tiene que tener formato xx@xxx.xx y el teléfono 9 dígitos. </p>
+        <p>Si hay algún error al rellenarlo, se indicará cual es.</p>
+    </div>
+
+
+
+    <div class="disenoform">
+
+
+        <form class="formulario">
+            <!-- Es indispensable meter el nombre y el email para que aparezca el boton submit-->
+
+            <p>
+                <label for="nombre">Nombre
+
+                </label>
+                <input type="text" onkeyup="marcarBoton()" name="introducir_nombre" id="nombre" required
+                    placeholder="Escribe tu nombre">
+            </p>
+
+            <p>
+                <label for="username">Email:</label>
+                <input type="text" onkeyup="marcarBoton()" id="correo" name="correo" placeholder="Email" required>
+            </p>
+
+            <p>
+                <label for="telefone">Teléfono
+                </label>
+                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Teléfono de 9 cifras"  required >
+            </p>
+
+            <label for='motivo'>Motivo del contacto</label>
+            <select id='motivo' name='motivo' required>
+                <option value=''>Seleccione</option>
+                <option>Queja o Reclamación</option>
+                <option>Ofrecer Productos</option>
+                <option>Solicitud de Información</option>
+
+            </select>
+            </li>
+
+            <p>
+                <label for="asunto">Asunto
+
+                </label>
+                <input type="text" name="introducir_asunto" id="assunto" placeholder="Escribe un asunto">
+            </p>
+
+            <p>
+                <label for="mensaje">Mensaje
+
+                </label>
+                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                    placeholder="Deja aquí tu comentario..."></textarea>
+            </p>
+
+            <label>
+                <input type='checkbox' value='SI' id='acepto' required/>
+                He leído y acepto las condiciones
+            </label>
+
+            <br>
+            <br>
+
+            <input id="botoncito" type="submit" value="Submit" disabled
+                onclick="pruebaemail(correo.value);checkbox(); validaMotivo(); validaNombre();telefonoLongitud();confirmar()">
+
+
+            </input>
+
+            <br>
+            <br>
+            <div>
+                <input type="button" value="Resetear Formulario" onclick="location.reload(true)" />
+                <!--Esto fuerza un f5 de la página sin cache y vuelve el boton submit a disabled-->
+                <!--He intentado hacerlo con el reset pero no devolvía el boton submit a su estado original por la validación de JavaScript-->
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+
+    <footer>Todos los derechos reservados &copy;</footer>
+
+
+    <script>
+
+        marcarBoton();
+        telefonoPredefinido();
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>
